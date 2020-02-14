@@ -1,0 +1,107 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: montserrat;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* style css pour la navbar pour toutes les pages*/
+
+header label.logo img {
+    margin-left: 30px;
+    height: 100px;
+    width: 150px;
+}
+
+header nav.nav-bar {
+    background: white;
+    height: 100px;
+    width: 100%;
+}
+
+header nav.nav-bar ul {
+    float: right;
+    margin-right: 30px;
+}
+
+header nav.nav-bar ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 20px;
+}
+
+header nav.nav-bar ul li a {
+    color: #0002E1;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+a.active, a:hover {
+    background: #008080;
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: rgb(20, 35, 75);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media only screen and (max-width: 952) {
+    header label.logo img {
+        height: 100;
+        width: 50;
+    }
+    header nav.nav-bar ul a {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+    header nav.nav-bar ul {
+        position: fixed;
+        width: 100%;
+        background: #2c3e50;
+        top: 80;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    header nav.nav-bar ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    header nav.nav-bar ul li {
+        font-size: 20px;
+    }
+    #check:checked~ul {
+        left: 0;
+    }
+}
