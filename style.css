@@ -3,6 +3,8 @@
     padding: 0;
     margin: 0;
     list-style: none;
+    list-style: none;
+    text-decoration: none;
 }
 
 html {
@@ -10,55 +12,55 @@ html {
 }
 
 body {
-    font-family: montserrat;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-/* style css pour la navbar pour toutes les pages*/
-
-header label.logo img {
-    margin-left: 30px;
-    height: 100px;
-    width: 150px;
-}
-
-header nav.nav-bar {
-    background: white;
-    height: 100px;
+header {
+    background: rgb(20, 35, 75);
+    height: 80;
     width: 100%;
 }
 
-header nav.nav-bar ul {
-    float: right;
-    margin-right: 30px;
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
 }
 
-header nav.nav-bar ul li {
+label .logo-fort {
+    color: red;
+}
+
+header ul {
+    float: right;
+    margin-right: 40px;
+}
+
+header ul li {
     display: inline-block;
     line-height: 80px;
-    margin: 0 20px;
+    margin: 0 5 px;
 }
 
-header nav.nav-bar ul li a {
-    color: #0002E1;
-    font-size: 17px;
-    padding: 7px 13px;
-    border-radius: 4px;
+header ul li a {
+    color: white;
+    font-size: 18px;
     text-transform: uppercase;
+    padding: 7px 15px;
+    border-radius: 5px;
+    transition: .3s;
 }
 
-a.active, a:hover {
-    background: #008080;
+a.active, header a:hover {
+    background: #1b9bff;
     transition: .5s;
 }
 
 .checkbtn {
     font-size: 30px;
-    color: rgb(20, 35, 75);
+    color: white;
     float: right;
     line-height: 80px;
     margin-right: 40px;
@@ -70,12 +72,12 @@ a.active, a:hover {
     display: none;
 }
 
-@media only screen and (max-width: 952) {
-    header label.logo img {
-        height: 100;
-        width: 50;
+@media only screen and (max-width: 952px) {
+    header.logo {
+        font-size: 30px;
+        padding-left: 50px;
     }
-    header nav.nav-bar ul a {
+    header ul li a {
         font-size: 16px;
     }
 }
@@ -84,22 +86,26 @@ a.active, a:hover {
     .checkbtn {
         display: block;
     }
-    header nav.nav-bar ul {
+    ul {
         position: fixed;
         width: 100%;
+        height: 100vh;
         background: #2c3e50;
-        top: 80;
-        left: -100%;
+        top: 80px;
         text-align: center;
         transition: all .5s;
     }
-    header nav.nav-bar ul li {
+    header ul li {
         display: block;
-        margin: 50px 0;
+        margin: 20px 0;
         line-height: 30px;
     }
-    header nav.nav-bar ul li {
+    header ul li a {
         font-size: 20px;
+    }
+    header a:hover, a.active {
+        background: none;
+        color: #0082e6;
     }
     #check:checked~ul {
         left: 0;
