@@ -3,7 +3,6 @@
     padding: 0;
     margin: 0;
     list-style: none;
-    list-style: none;
     text-decoration: none;
 }
 
@@ -11,13 +10,19 @@ html {
     font-size: 16px;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 body {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-header {
+nav {
+    position: fixed;
     background: rgb(20, 35, 75);
-    height: 80;
+    height: 80px;
     width: 100%;
 }
 
@@ -33,18 +38,22 @@ label .logo-fort {
     color: red;
 }
 
-header ul {
+label .lien-logo {
+    color: white;
+}
+
+nav ul {
     float: right;
     margin-right: 40px;
 }
 
-header ul li {
+nav ul li {
     display: inline-block;
     line-height: 80px;
     margin: 0 5 px;
 }
 
-header ul li a {
+nav ul li a {
     color: white;
     font-size: 18px;
     text-transform: uppercase;
@@ -53,7 +62,7 @@ header ul li a {
     transition: .3s;
 }
 
-a.active, header a:hover {
+a.active, nav a:hover {
     background: #1b9bff;
     transition: .5s;
 }
@@ -72,17 +81,321 @@ a.active, header a:hover {
     display: none;
 }
 
-@media only screen and (max-width: 952px) {
-    header.logo {
+.image-homePage {
+    color: white;
+    background: url("img/bg-homePage.jpg") no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+}
+
+.welcome {
+    text-align: center;
+    padding: 150px 0 70px 0;
+    line-height: 1;
+}
+
+.welcome-message {
+    font-family: 'Pinyon Script', serif;
+    color: #C89446;
+    display: block;
+    font-size: 5.2rem;
+}
+
+.welcome-name {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding-top: 10px;
+    text-transform: uppercase;
+    color: #1DA1F2;
+}
+
+.welcome-profession {
+    display: block;
+    font-size: 2rem;
+    font-weight: 720;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-top: 20px;
+    color: #4267B2;
+}
+
+/* ma photo de profil*/
+
+.container {
+    background: url("img/splash.png");
+    max-width: 100%;
+    height: auto;
+}
+
+.container .container-presentation {
+    user-select: none;
+    margin: 80px 20px 0 20px;
+    background: #231e39;
+    color: #b3b8cd;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 10px 20px -10px rgba(0, 0, 0, .75);
+}
+
+.container .cover-photo {
+    background: url("img/cover.jpg");
+    height: 160px;
+    width: auto;
+    border-radius: 8px 8px 0 0;
+}
+
+.container .profile {
+    height: 120px;
+    width: 120px;
+    border-radius: 50px;
+    margin: 93px 0 0 -175px;
+    padding: 7px;
+    background: #292343;
+}
+
+.container .profile-name {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 27px 0 0 120px;
+}
+
+.container .about {
+    margin-top: 35px;
+    line-height: 21px;
+}
+
+.container-presentation button {
+    margin: 10px 0 40px 0;
+}
+
+.container .msg-btn, .container .follow-btn {
+    background: #03bfbc;
+    border: 1px solid #03bfbc;
+    padding: 10px 25px;
+    color: #231e39;
+    border-radius: 4px;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+.container .follow-btn {
+    margin-left: 10px;
+    background: transparent;
+    color: #02899c;
+}
+
+.container .follow-btn:hover {
+    color: #231e39;
+    background: #03bfbc;
+    transition: .5s;
+}
+
+.container .container-presentation i {
+    padding-left: 20px;
+    font-size: 20px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.container .container-presentation i:hover {
+    color: #03bfbc;
+}
+
+.container .container-message {
+    margin: 10px 20px 0 20px;
+}
+
+.container .message::before {
+    content: "“";
+    color: #C89446;
+    font-size: 40px;
+    width: 50px;
+    margin-bottom: 0px;
+}
+
+.container .message::after {
+    content: "”";
+    color: #C89446;
+    font-size: 40px;
+    width: 50px;
+    margin-bottom: 0px;
+}
+
+p.clean {
+    clear: both;
+}
+
+/*reseaux sociaux*/
+
+.reseau-social {
+    width: 70px;
+    margin-top: 70px;
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, .4);
+}
+
+.reseau-social li {
+    position: relative;
+    height: 60px;
+}
+
+.reseau-social li a {
+    display: block;
+    color: white;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    padding-left: 25%;
+    border-bottom: 1px solid rgba(0, 0, 0, .4);
+    transition: all .3s linear;
+}
+
+.reseau-social li a i {
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    font-size: 27px;
+}
+
+.reseau-social li a span {
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: none;
+}
+
+.reseau-social li:nth-child(1) a {
+    background: #4267B2;
+}
+
+.reseau-social li:nth-child(2) a {
+    background: #1DA1F2;
+}
+
+.reseau-social li:nth-child(3) a {
+    background: #E1306C;
+}
+
+.reseau-social li:nth-child(4) a {
+    background: #2867B2;
+}
+
+.reseau-social li:nth-child(5) a {
+    background: #333;
+}
+
+.reseau-social li:nth-child(6) a {
+    background: #ff0000;
+}
+
+.reseau-social a:hover {
+    width: 200px;
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, .3);
+}
+
+.reseau-social ul li:hover a span {
+    padding-left: 30%;
+    display: block;
+}
+
+/* footer*/
+
+.footer {
+    background: #383838 bottom right no-repeat;
+    font-weight: 300;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-title {
+    color: #C89446;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.footer-column {
+    margin-bottom: 1rem;
+}
+
+.footer-column:first-child {
+    flex-wrap: wrap;
+}
+
+.footer-credits span {
+    font-family: 'Pinyon Script', serif;
+    color: #C89446;
+    font-size: 30px;
+}
+
+/* ma presentation*/
+
+@media only screen and (min-width: 650px) {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+    .container .container-presentation {
+        width: 350px;
+        margin-left: 100px;
+    }
+    .container .container-message {
+        width: calc(100% - 500px);
+        margin-right: 0;
+        margin: 100px 40px 80px 20px;
+    }
+}
+
+/* le footer*/
+
+@media only screen and (min-width: 800px) {
+    .footer-columns {
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer-column {
+        width: 290px;
+        margin-right: 20px;
+    }
+    .footer-column:first-child {
+        width: 450px;
+    }
+    .footer-column:last-child {
+        margin-right: 0;
+        flex: none;
+    }
+    .footer a {
+        text-decoration: none;
+        color: inherit;
+    }
+    .footer a:hover {
+        color: #C89446;
+    }
+    .footer-credits {
+        font-size: 0.93em;
+        padding-top: 50px;
+    }
+    .footer-credits span {
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 952px) {
+    nav.logo {
         font-size: 30px;
         padding-left: 50px;
     }
-    header ul li a {
+    nav ul li a {
         font-size: 16px;
     }
 }
 
-@media only screen and (max-width: 858px) {
+@media screen and (max-width: 858px) {
     .checkbtn {
         display: block;
     }
@@ -92,18 +405,19 @@ a.active, header a:hover {
         height: 100vh;
         background: #2c3e50;
         top: 80px;
+        left: -100%;
         text-align: center;
         transition: all .5s;
     }
-    header ul li {
+    nav ul li {
         display: block;
         margin: 20px 0;
         line-height: 30px;
     }
-    header ul li a {
+    nav ul li a {
         font-size: 20px;
     }
-    header a:hover, a.active {
+    nav a:hover, a.active {
         background: none;
         color: #0082e6;
     }
