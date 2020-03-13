@@ -19,7 +19,7 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-nav {
+.nav {
     position: fixed;
     background: rgb(20, 35, 75);
     height: 80px;
@@ -228,6 +228,40 @@ p.clean {
     clear: both;
 }
 
+/* message de bienvenue sur mon site*/
+
+.center {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.92), rgba(54, 54, 54, 0.5) 98.24%, rgba(28, 28, 28, .1)), url("img/sniper.jpg") center center / cover no-repeat;
+    color: #FFF;
+    height: 500px;
+    margin: 50px 20px;
+}
+
+.center-message {
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.center-message h2 {
+    padding: 60px 0 0 0;
+}
+
+.center-message p {
+    margin-top: 20px;
+}
+
+.plateforme .first, .plateforme .last {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 50px;
+}
+
+.facebook, .youtube, .instagram, .linkedin {
+    height: 100px;
+    width: 100px;
+}
+
 /*reseaux sociaux*/
 
 .reseau-social {
@@ -348,6 +382,20 @@ p.clean {
         width: calc(100% - 500px);
         margin-right: 0;
         margin: 100px 40px 80px 20px;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    /* traitement pour bien venu sur mon site personnel*/
+    .center {
+        height: 100%;
+        margin: 50px 120px;
+    }
+    .plateforme .first, .plateforme .last {
+        margin: 50px 120px 50px 120px;
+    }
+    .plateforme .last {
+        padding-bottom: 50px;
     }
 }
 
