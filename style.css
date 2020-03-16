@@ -20,10 +20,12 @@ body {
 }
 
 .nav {
+    position: relative;
     position: fixed;
     background: rgb(20, 35, 75);
     height: 80px;
     width: 100%;
+    z-index: 3;
 }
 
 label.logo {
@@ -224,6 +226,199 @@ a.active, nav a:hover {
     margin-bottom: 0px;
 }
 
+/* mise en forme pour la page de compétence 
+margin-left: 45%;
+    margin-top: -70px;*/
+
+.image-skills {
+    color: white;
+    background: url("img/bg-skillsPage.jpg") no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+}
+
+.skills-message {
+    float: left;
+    margin: -70px 0 0 45%;
+    font-family: 'Pinyon Script', serif;
+    color: #C89446;
+    font-size: 2.2rem;
+}
+
+.skills-name {
+    float: right;
+    margin: 40px 44% 0 0;
+    font-family: 'Pinyon Script', serif;
+    font-size: 2rem;
+}
+
+.block1 {
+    margin-top: 50px;
+    display: flex;
+    align-content: space-between;
+    height: auto;
+}
+
+.block1 .container1 {
+    flex-wrap: wrap;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    width: auto;
+    margin: 0 40px 0 40px;
+    justify-content: space-around;
+}
+
+.container1 .card {
+    position: relative;
+    margin-left: 10px;
+    width: 250px;
+    background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container1 .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .5);
+}
+
+.container1 .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 90%;
+    height: 100px;
+    background: rgba(255, 255, 255, .3);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.container1 .percent {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 50px #000;
+    background: #222;
+    z-index: 2;
+}
+
+.percent .number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.percent .number h2 {
+    color: white;
+    font-weight: 700;
+    font-size: 40px;
+    transition: 0.5s;
+}
+
+.card:hover .percent .number h2 {
+    color: white;
+    font-size: 50px;
+}
+
+.percent .number h2 span {
+    font-size: 24px;
+    color: #777;
+}
+
+.card:hover .percent .number h2 span {
+    color: white;
+}
+
+.text {
+    position: relative;
+    color: #777;
+    margin-top: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.card:hover .text {
+    color: #fff;
+}
+
+svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    z-index: 2;
+}
+
+svg circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #191919;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+}
+
+/* enlever les colorations sur le cercle*/
+
+svg circle:nth-child(2) {
+    stroke-dasharray: 440;
+    stroke-dashoffset: 400;
+}
+
+.card:nth-child(1) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(400 - (400 * 90) / 100);
+    stroke: #00ff43;
+}
+
+.card:nth-child(2) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(400 - (400 * 60) / 100);
+    stroke: #00a1ff;
+}
+
+.card:nth-child(3) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(400 - (400 * 60) / 100);
+    stroke: #ff04f7;
+}
+
+.card:nth-child(4) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(400 - (400 * 60) / 100);
+    stroke: #ff04f7;
+}
+
+.card:nth-child(5) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(400 - (400 * 60) / 100);
+    stroke: #ff04f7;
+}
+
+.card:nth-child(6) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(400 - (400 * 60) / 100);
+    stroke: #ff04f7;
+}
+
+.card:nth-child(7) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(400 - (400 * 60) / 100);
+    stroke: #ff04f7;
+}
+
 p.clean {
     clear: both;
 }
@@ -337,22 +532,6 @@ p.clean {
 .contact-form textarea::placeholder {
     color: white;
 }
-
-/*.contact-form .submit {
-    width: 40%;
-    background: none;
-    padding: 10px;
-    outline: none;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    height: 33px;
-    text-align: center;
-    cursor: pointer;
-    margin-left: 20%;
-    border: 2px solid #15f4ee;
-    color: #15f4ee;
-}*/
 
 .contact-form .submit {
     text-align: center;
@@ -501,6 +680,11 @@ p.clean {
 }
 
 @media screen and (min-width: 700px) {
+    /* traitement de la page de compétence*/
+    .container1 .card {
+        margin-left: 2px;
+        margin-top: 2px;
+    }
     /* traitement pour bien venu sur mon site personnel*/
     .center {
         height: 100%;
