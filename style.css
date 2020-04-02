@@ -226,9 +226,7 @@ a.active, nav a:hover {
     margin-bottom: 0px;
 }
 
-/* mise en forme pour la page de compétence 
-margin-left: 45%;
-    margin-top: -70px;*/
+/* mise en forme pour la page de compétence */
 
 .image-skills {
     color: white;
@@ -252,9 +250,18 @@ margin-left: 45%;
     font-size: 2rem;
 }
 
+.domaine {
+    text-align: center;
+    margin-top: 60px;
+    font-family: 'Lobster';
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
 .block1 {
-    margin-top: 50px;
+    margin-top: 10px;
     display: flex;
+    margin-bottom: 120px;
     align-content: space-between;
     height: auto;
 }
@@ -377,8 +384,6 @@ svg circle {
     transform: translate(5px, 5px);
 }
 
-/* enlever les colorations sur le cercle*/
-
 svg circle:nth-child(2) {
     stroke-dasharray: 440;
     stroke-dashoffset: 400;
@@ -466,6 +471,78 @@ p.clean {
     height: calc(100vh - 200px);
 }
 
+/* page concernant le loisir*/
+
+.center {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.92), rgba(54, 54, 54, 0.5) 98.24%, rgba(28, 28, 28, .1)), url("img/sniper.jpg") center center / cover no-repeat;
+    color: #FFF;
+    height: 500px;
+    margin: 50px 20px;
+}
+
+.image-hobbiesPage {
+    background: url("img/hobbies.jpg") center center / cover no-repeat;
+    color: #FFF;
+    height: calc(100vh - 80px);
+}
+
+.hobbies-session {
+    padding-top: 9px;
+}
+
+.hobbies-session .container-small {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 960px;
+}
+
+.hobbies-session .block {
+    margin-bottom: 50px;
+}
+
+.hobbies-session .title {
+    font-size: 1.75rem;
+    line-height: 1.1;
+    letter-spacing: 2px;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 1rem 0 0 0;
+}
+
+.hobbies-session .block-img {
+    max-width: 350px;
+    margin: 0 auto;
+    border: solid 1px #C89446;
+}
+
+.hobbies-session .block-img img {
+    position: relative;
+    z-index: 1;
+}
+
+/* page concernant l'experience */
+
+.image-experiencePage {
+    background: url("img/experience.jpg") center center / cover no-repeat;
+    color: #FFF;
+    height: calc(100vh - 80px);
+}
+
+.experience, .contact {
+    text-align: center;
+    padding: 150px 0 70px 0;
+    line-height: 1;
+}
+
+.experience-message, .contact-message {
+    font-family: 'Pinyon Script', serif;
+    color: #C89446;
+    display: block;
+    font-size: 4.2rem;
+    margin-right: 90px;
+}
+
 /*information dans le formulaire de contact*/
 
 .container-form {
@@ -503,6 +580,26 @@ p.clean {
     font-size: italic;
     color: white;
     letter-spacing: 2px;
+}
+
+.boostrap {
+    margin-top: 20px;
+}
+
+.boostrap .boostrap1 {
+    text-align: center;
+    align-items: center;
+    color: red;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.boostrap .boostrap2 {
+    text-align: center;
+    align-items: center;
+    color: chartreuse;
+    font-size: 20px;
+    font-weight: 300;
 }
 
 .contact-form input {
@@ -639,6 +736,17 @@ p.clean {
     text-align: center;
 }
 
+.container-footer {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1150px;
+}
+
+.footer-columns {
+    justify-content: space-between;
+    padding-left: 40px;
+}
+
 .footer-title {
     color: #C89446;
     font-weight: bold;
@@ -647,7 +755,7 @@ p.clean {
 }
 
 .footer-column {
-    margin-bottom: 1rem;
+    margin-bottom: 20px;
 }
 
 .footer-column:first-child {
@@ -701,16 +809,71 @@ p.clean {
 /* le footer*/
 
 @media only screen and (min-width: 800px) {
+    /*traitement de la page de loisir*/
+    .hobbies-session .block {
+        margin-bottom: 100px;
+    }
+    .hobbies-session .block-left, .block-right {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .hobbies-session .block-img {
+        border: none;
+        position: relative;
+    }
+    .hobbies-session .block-left .block-body, .hobbies-session .block-right .block-body {
+        width: 445px;
+        flex: none;
+    }
+    .hobbies-session .block-img::before {
+        content: '';
+        display: block;
+        border: solid 1px #C89446;
+        position: absolute;
+        top: -30px;
+        left: -30px;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+    .hobbies-session .block-right .block-img::before {
+        left: auto;
+        right: -30px;
+    }
+    .hobbies-session .block-left .block-img {
+        margin-left: 30px;
+    }
+    .hobbies-session .block-right .block-img {
+        margin-right: 30px;
+    }
+    .hobbies-session .block-left .block-body {
+        margin-left: 20px;
+    }
+    .hobbies-session .block-right .block-body {
+        margin-right: 20px;
+        order: -1;
+    }
+    .hobbies-session .title {
+        margin-bottom: 1.2rem;
+    }
+    .hobbies-session .title::before {
+        margin-bottom: 10px;
+    }
+    /* le footer*/
+    .footer {
+        background-image: url(img/splash.png);
+    }
     .footer-columns {
         display: flex;
         justify-content: space-between;
     }
     .footer-column {
-        width: 290px;
-        margin-right: 20px;
+        width: 200px;
+        /*margin-right: 20px;*/
     }
     .footer-column:first-child {
-        width: 450px;
+        width: 400px;
     }
     .footer-column:last-child {
         margin-right: 0;
