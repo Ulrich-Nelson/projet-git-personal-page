@@ -33,15 +33,21 @@ $(document).ready(function () {
     }
     year();
 
-    function clickbuttom() {
-        // rendre les liens actifs dans la topbar
-        $(document).on("click", "ul li ", function () {
-            $(this).addClass("active");
-        })    
+    // pour rendre les liens actifs
+    function ONCLICK() {
+        const currentLocalisation = location.href;
+        const menuItem = document.querySelectorAll("a");
+        const menuLength = menuItem.length;
+        for (let i = 0; i < menuLength; i++) {
+            if (menuItem[i].href === currentLocalisation) {
+                menuItem[i].className = "active";
+            }
+        }    
     }
-    clickbuttom();
+    ONCLICK();
 
+    
 });
-   
+
 
 

@@ -23,8 +23,8 @@
         <i class="fas fa-bars"></i>
     </label>
     <label class="logo">
-        <a class="lien-logo" href="/index.html">tapin<span class="logo-fort">fort</span></a></label>
-     <ul>
+        <a class="lien-logo">tapin<span class="logo-fort">fort</span></a></label>
+    <ul>
         <li><a href="/index.html">Home</a></li>
         <li><a href="/experience.html">experiences</a></li>
         <li><a href="/skills.html">skills</a></li>
@@ -195,7 +195,7 @@ if (isset($_POST['envoyer'])) {
                     <p>
                         <p class="footer-text">Paris, France</p>
                         <br>
-                        <a class="footer-text" href="/contact.php">✉ulrichnelsontapinfo@yahoo.fr</a>
+                        <a class="footer-text">✉ulrichnelsontapinfo@yahoo.fr</a>
                     </p>
                 </div>
                 <div class="footer-column">

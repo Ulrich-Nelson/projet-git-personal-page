@@ -64,7 +64,7 @@ nav ul li a {
     transition: .3s;
 }
 
-li.active a, nav a:hover {
+a.active, nav a:hover {
     background: #1b9bff;
     transition: .5s;
 }
@@ -1168,7 +1168,7 @@ p.clean {
     nav ul li a {
         font-size: 20px;
     }
-    nav a:hover, li.active a{
+    nav a:hover, a.active {
         background: none;
         color: #0082e6;
     }
