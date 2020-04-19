@@ -9,7 +9,10 @@
     <link href="https://fonts.googleapis.com/css?family=Pinyon+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <script src="sreen.js"></script>
     <title>Tapinfort.com, Acceuil</title>
 </head>
 
@@ -21,13 +24,13 @@
         </label>
         <label class="logo">
             <a class="lien-logo" href="/index.html">Tapin<span class="logo-fort">fort</span></a></label>
-        <ul>
-            <li><a class="active" href="/index.html">Home</a></li>
-            <li><a href="/experience.html">experiences</a></li>
-            <li><a href="/skills.html">skills</a></li>
-            <li><a href="/hobbies.html">hobbies</a></li>
-            <li><a href="/contact.php">contact</a></li>
-        </ul>
+    <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/experience.html">experiences</a></li>
+        <li><a href="/skills.html">skills</a></li>
+        <li><a href="/hobbies.html">hobbies</a></li>
+        <li><a href="/contact.php">contact</a></li>
+    </ul>
     </nav>
     <div class="image-homePage">
         <div class="welcome">
@@ -44,7 +47,7 @@
             </div>
             <div class="profile-name">Ulrich Nelson </div>
             <p class="about">Développeur web et E-santé</p>
-            <button class="msg-btn">Message</button>
+            <button class="msg-btn"><a href="/contact.php">Message</a></button>
             <button class="follow-btn">Following</button>
             <div class="reseau-btn">
                 <i class="fab fa-facebook-f"></i>
@@ -55,24 +58,11 @@
         </div>
         <div class="container-message">
             <div class="message">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, nostrum possimus nobis adipisci enim
-                    fugiat
-                    minus! Rerum explicabo repellat beatae omnis doloribus! Ad amet illo explicabo quidem quos earum
-                    dolorum.
-                    Quia maxime ratione unde blanditiis exercitationem in, minima enim quidem repellat molestias ex
-                    culpa
-                    explicabo perferendis quisquam beatae consequatur iure commodi temporibus. Saepe natus sapiente
-                    animi
-                    quos
-                    eos totam ea!
-                    Minus exercitationem, alias incidunt nihil ad distinctio! Natus officiis iusto minima libero ab aut
-                    quos
-                    cupiditate, reprehenderit praesentium harum laudantium ut vel voluptas esse minus facere omnis
-                    consequatur
-                    est voluptatem.
-                    Praesentium at sequi soluta veniam nesciunt. Temporibus, deserunt. Veniam, consectetur cum esse quia
-                    voluptates explicabo quisquam aliquam reprehenderit laboriosam cumque nisi ad adipisci architecto
+                <p>Je suis Ulrich Nelson, Développeur web.<br>
+                Comme tout développeur, j'ai une passion pour <br>l'internet et les nouvelles technologies.<br>
+                Maîtrisant quelques langages de programmations <br>je profite souvent de mon temps libre pour mettre en <br>pratique mes connaissances à travers des projets✌. 
                 </p>
+                
             </div>
         </div>
     </div>
@@ -86,53 +76,53 @@
         </div>
         <div class="plateforme">
             <div class="first">
-                <a href="#"><img src="img/facebook.png" alt="Ma page facebook" class="facebook" class="all"></a>
-                <a href="#"><img src="img/youtube.jpeg" alt="Ma page youtube" class="youtube" class="all"></a>
+                <a href="https://www.facebook.com/nelson.mendey" target="_blank"><img src="img/facebook.png" alt="Ma page facebook" class="facebook" class="all"></a>
+                <a href="https://www.youtube.com/channel/UCHMcxmSCziWL4yT9nbDftXg?view_as=subscriber" target="_blank"><img src="img/youtube.jpeg" alt="Ma page youtube" class="youtube" class="all"></a>
             </div>
             <div class="last">
-                <a href="#"><img src="img/instagram.png" alt="Ma page instagram" class="instagram" class="all"></a>
-                <a href="#"><img src="img/linkedin.png" alt="Ma page linkedin" class="linkedin" class="all"></a>
+                <a href="https://www.instagram.com/nelsonmendey/" target="_blank"><img src="img/instagram.png" alt="Ma page instagram" class="instagram" class="all"></a>
+                <a href="https://www.linkedin.com/in/ulrich-nelson-tapinfo-048461167" target="_blank"><img src="img/linkedin.png" alt="Ma page linkedin" class="linkedin" class="all"></a>
             </div>
 
         </div>
     </div>
 
 
-    <footer class="footer" id="footer">
+     <footer class="footer" id="footer">
         <div class="container-footer">
             <div class="footer-columns">
                 <div class="footer-column">
-                    <div class="footer-title" class="my-name">urlich nelson</div>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti dolorum, sint corporis
-                        nostrum, possimus unde eos vitae eius quasi saepe.
+                    <div class="footer-title my-name">urlich nelson ☺</div>
+                    <p class="footer-text">
+                        ❝Comme tout développeur, j'ai une passion pour internet et les nouvelles technologies.
+                        Quelques fois, profite de mon temps libre pour mettre en pratique mes connaissances à travers des
+                        projets✌❞
                     </p>
                 </div>
                 <div class="footer-column">
-                    <div class="footer-title">Contact info</div>
-                    <p>
-                        1234 Altschul, New York, NY 10027-0000<br>
-                        +1 987 654 3210<br>
-                        <a href="mailto:contact@thefiasco.com">ulrichnelsontapinfo@yahoo.com</a>
-                    </p>
+                    <div class="footer-title">Contact info✍</div>            
+                        <p class="footer-text">Paris, France</p>
+                        <br>
+                        <a class="footer-text" href="/contact.php">✉ulrichnelsontapinfo@yahoo.fr</a>      
                 </div>
                 <div class="footer-column">
-                    <div class="footer-title">Disponibilités</div>
+                    <div class="footer-title">Proverbe français ☟ </div>
                     <ul>
-                        <li>lundi</li>
-                        <li>Mardi</li>
-                        <li>Mercredi</li>
-                        <li>Jeudi</li>
+                        <li class="footer-text">"Tout doucement vient la richesse, qu'accroissent travail et sagesse."</li>
+                        
+                    </ul>
+                    <ul>
+                        <li id="MyClok" class=" MYtime"></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="footer-credits">
-            <p><span>Copyrigt 2019 Ulrich Nelson</span><br>
+            <p><span>Copyrigt <span id="annee"></span> ⌚ Ulrich Nelson</span><br>
                 Toute reproduction interdite</p>
-
+    
         </div>
-    </footer>
+    </footer> 
 </body>
 
 </html>
