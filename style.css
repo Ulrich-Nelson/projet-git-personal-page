@@ -262,6 +262,12 @@ strong.skills-name {
     color: white;
 }
 
+.back-image-skills .information{
+    text-align: center;
+    font-weight: bold;
+    padding-top: 20px;''
+
+} 
 div.domaine {
     text-align: center;
     margin-top: 60px;
