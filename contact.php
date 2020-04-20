@@ -55,8 +55,8 @@ if (isset($_POST['envoyer'])) {
             $errors = "Adresse email invalide";
         }
 
-        $to = "tapinfoulrichnelson@yahoo.com";
-        $subject = "CONTACT - Tapinfort.com";
+        $to = $_POST['email'];
+        $subject = "CONTACT - ulrich-nelson.fr";
         $message = '
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
@@ -115,7 +115,6 @@ if (isset($_POST['envoyer'])) {
             </td>
         </tr>
 
-
     </table>
 
 </body>
@@ -124,11 +123,11 @@ if (isset($_POST['envoyer'])) {
 
         $headers[] = 'MIME-Version: 1.0';
         $headers[] = 'Content-type: text/html; charset=utf-8';
-        $headers[] = 'From: Tapinfo.com <tapinfoulrichnelson@yahoo.com>';
+        $headers[] = 'From: "Mon-site" <monsite@ulrich-nelson.fr>';
 
         mail($to, $subject, $message, implode("\r\n", $headers));
 
-        $succes = $_POST['nom'] . ", " . "votre message a bien été envoyé !";
+        $succes = $_POST['prenom'] . ", " . "votre message a bien été envoyé !";
     } else {
         $errors = "tous les champs doivent être complétés";
     }
